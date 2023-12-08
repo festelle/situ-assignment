@@ -24,7 +24,7 @@ export default function CompleteProfessionalInfo({user}:{user: User|null}) {
     if (isEmpty) return;
 
     await createProfessional(newProfessional as professionalInfoType);
-    redirect("/")
+    redirect("/profesionales")
 
   }
 

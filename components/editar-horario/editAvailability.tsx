@@ -24,7 +24,7 @@ export default async function EditAvailability({user}:{user: User|null}) {
     if (isEmpty) return;
 
     await updateProfessional(newProfessional as professionalInfoType);
-    redirect("/")
+    redirect("/profesionales")
 
   }
 
