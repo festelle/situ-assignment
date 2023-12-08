@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Situ
 
-## Getting Started
+En este proyecto se encuentra la solución al problema entregado. Es posible:
 
-First, run the development server:
+* Ver y filtrar profesionales de la salud.
+* Crear, iniciar y administar cuenta (esto se hizo usando el servicio [clerk](https://clerk.com/)).
+* Registrarse como profesional y administrar la disponibilidad (los datos se guardan usando la base de datos [mongodb](https://www.mongodb.com/)).
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Ver proyecto en vivo
+El proyecto se puede revisar en [este link]()
+
+## Correr el servidor localmente
+
+Para poder correr el proyecto localmente, es necesario tener:
+* node versión 18
+* llaves pública y secreta de Clerk
+* URI para conectarse a mongodb
+
+Estos últimos datos debe estar presente en un archivo llamado .env ubicado en la raíz. El archivo debe seguir la estructura:
+
+```
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=<llave pública Clerk>
+CLERK_SECRET_KEY=<llave secreta Clerk>
+
+MONGODB_URI=<URI mongodb>
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Después, se debe instalar las dependencias necesarias. El proyecto usa npm, por lo que se debe correr el comando:
+```
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Una vez hecho todo lo anterior, se puede correr el servidor local con el comando:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```
+npm run dev
+```
