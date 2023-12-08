@@ -7,7 +7,7 @@ En este proyecto se encuentra la solución al problema entregado. Es posible:
 * Registrarse como profesional y administrar la disponibilidad (los datos se guardan usando la base de datos [mongodb](https://www.mongodb.com/)).
 
 ## Ver proyecto en vivo
-El proyecto se puede revisar en [este link]()
+El proyecto se puede revisar en [este link](https://situ-assignment-zasc.vercel.app/)
 
 ## Correr el servidor localmente
 
@@ -34,4 +34,18 @@ Una vez hecho todo lo anterior, se puede correr el servidor local con el comando
 
 ```
 npm run dev
+```
+## Esquema Base de datos
+
+En mongodb se crea una colección llamada "professionals" que almacena la información de todos los proesionales. Los documentos de esta colección sigue la estructura:
+
+```
+{
+  _id: ObjectId
+  userId: string
+  firstName: string
+  lastName: string
+  specialization: string
+  availability: string[]
+}
 ```
